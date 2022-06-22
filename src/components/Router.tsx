@@ -4,7 +4,7 @@ import Auth from "../pages/Auth";
 import Home from "../pages/Home";
 import Setting from "../pages/Setting";
 
-const AppRouter = (props: { isLoggedIn: any }) => {
+const AppRouter = (props: { isLoggedIn: boolean; userObj: any }) => {
   return (
     <HashRouter>
       <Routes>
