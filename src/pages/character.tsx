@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const character = () => {
+const Character = () => {
   return (
     <>
       <div>Home</div>
@@ -9,4 +9,4 @@ const character = () => {
     </>
   );
 };
-export default character;
+export default Character;

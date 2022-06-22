@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const friendpage = () => {
+const Friendpage = () => {
   return (
     <>
-      <div>Home</div>
+      <div>friendpage</div>
       <Link to="/friendpage">friendpage</Link>
     </>
   );
 };
-export default friendpage;
+export default Friendpage;

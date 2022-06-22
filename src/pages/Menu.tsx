@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <div>Home</div>
+      <div>Menu</div>
       <Link to="/menu">menu</Link>
     </>
   );
 };
 export default Menu;
+
+export {}
