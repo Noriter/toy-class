@@ -10,6 +10,7 @@ const AppRouter = (props: {
   refreshUser: any;
 }) => {
   return (
+
     <HashRouter>
       <Routes>
         {props.isLoggedIn ? (
@@ -22,8 +23,15 @@ const AppRouter = (props: {
                   userObj={props.userObj}
                   refreshUser={props.refreshUser}
                 />
+                
               }
             />
+            <Route path="/" />
+            <Route path ="/character"></Route>
+            <Route path ="/friendpage"></Route>
+            <Route path ="/Menu"></Route>
+
+
           </>
         ) : (
           <Route path="/" element={<Auth />} />
