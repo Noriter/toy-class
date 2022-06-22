@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Auth from "../pages/Auth";
 import Home from "../pages/Home";
 import Setting from "../pages/Setting";
+import Test from "../pages/Test";
 
 const AppRouter = (props: {
   isLoggedIn: boolean;
@@ -24,6 +25,7 @@ const AppRouter = (props: {
                 />
               }
             />
+            <Route path="/test" element={<Test userObj={props.userObj} />} />
           </>
         ) : (
           <Route path="/" element={<Auth />} />
