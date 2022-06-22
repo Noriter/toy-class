@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { dbService } from "../fbase";
+import { dbService, storageService } from "../fbase";
 
 const Toy = (props) => {
   const [editing, setEditing] = useState(false);
@@ -8,6 +8,7 @@ const Toy = (props) => {
     const ok = window.confirm("정말 삭제할까요?");
     if (ok) {
       await dbService.doc(`posts/${props.postObj.id}`).delete();
+      await storageService.refFromURL(props.postObj.attachmentUrl).delete();
     }
   };
   const toggleEditing = () => setEditing((prev) => !prev);
@@ -41,6 +42,14 @@ const Toy = (props) => {
       ) : (
         <>
           <h4>{props.postObj.text}</h4>
+          {props.postObj.attachmentUrl && (
+            <img
+              src={props.postObj.attachmentUrl}
+              alt="postImage"
+              width="200px"
+              height="200px"
+            />
+          )}
           {props.isOwner && (
             <>
               <button onClick={onDeleteClick}>Delete</button>
