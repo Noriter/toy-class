@@ -1,31 +1,30 @@
-# Toy-Class
-### Team name / Project name
-Noriter / Toy-Class
+# 토이 클래스 🧸
+> 추억의 장난감들을 디지털화 해주는 토이 클래스!
 
-### Team member 
-김호중, 김성중, 류나정, 장가을, 정병식
+## Problem
+- 코로나로 인한 아이들의 정서 및 언어 발달 저하
+- 학생들간 친밀도 저하로 인한 사회성 부족
+- 온라인 학급 활동으로 인해 적은 상호간의 추억
 
-### Introduction
-안녕하세요. 
-저희 팀은 코로나 사태로 인해 나타난 ‘아동들의 정서와 언어 발달의 지연’ / ‘친밀감 및 사회성 저하’ 등의 문제점을 해결하고자 모인 Noriter 팀 입니다.
-Noriter 팀은 위의 문제점을 해결하기 위해 ‘코로나 시국으로 저하된 아이들의 사회성을 향상시키고 추억을 쌓을 수 있는 환경을 구축하자’라는 미션을 세워 
-‘Toy-Class’ 프로젝트를 구축하였습니다.
+## Outcome
+- 아이들의 장난감 이름, 성격, 사진으로 캐릭터 생성
+- 생성된 캐릭터와 함께 미션 수행, 사회성 발달
+- 다른 친구들의 캐릭터를 확인하며 교류
 
-### Process
+## Architecture
+![ToyClass](https://user-images.githubusercontent.com/61545957/175333720-fa8dc326-23e4-4d4d-a419-9c0bb62c9a5c.png)
 
+## Contributors
+> SW중심대학 공동해커톤 2022 @놀이터 
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/summermermer"><img src="https://avatars.githubusercontent.com/u/68227738?v=4" width="80px;" alt=""/><br /><sub><b>Najeong Ryu</b></sub></a></td>
+    <td align="center"><a href="https://github.com/joseph-106"><img src="https://avatars.githubusercontent.com/u/61545957?v=4" width="80px;" alt=""/><br /><sub><b>Sungjoong Kim</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Byeong-SeoK"><img src="https://avatars.githubusercontent.com/u/87558488?v=4" width="80px;" alt=""/><br /><sub><b>Byeong-SeoK</b></sub></a></td>
+    <td align="center"><a href="https://github.com/wlrma0108"><img src="https://avatars.githubusercontent.com/u/82634705?v=4" width="80px;" alt=""/><br /><sub><b>kim hojoong</b></sub></a></td>
+    <td align="center"><a href="https://github.com/JANGFALL"><img src="https://avatars.githubusercontent.com/u/98828190?v=4" width="80px;" alt=""/><br /><sub><b>JANGFALL</b></sub></a></td>
+  </tr>
+</table>
 
-### Develop environment
-
-
-### Reference information
-
-### test environment
-
-### Youtube link
-
-### Service
-코로나 시대의 인프라를 적극 활용하고자 디지털 서비스를 구축하였습니다.
-아이들에게 흥미와 재미, 관심을 이끌 수 있도록 개개인에게 캐릭터성을 부여함으로서 기존 교육 플랫폼과 다른 차별점을 두었습니다. 
-또한 아이들 간 친밀감 형성 및 사회성 형성 외에, 알림장 / 해야할 일 등의 학업 및 일정 관리 서비스를 추가함으로서 지속가능성과 활용도를 높였습니다.
-
-### Team logo
+## License
+[MIT](https://github.com/Noriter/toy-class/blob/main/LICENSE)
