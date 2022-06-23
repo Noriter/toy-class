@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v9_28 {
+  width: 100%;
+  height: 1133px;
+  background: rgba(235, 212, 82, 0.5);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+/*배경*/
+
+.v9_57 {
+  width: 459px;
+  height: 100px;
+  background: rgba(204, 200, 252, 1);
+  opacity: 1;
+  position: relative;
+  top: 75%;
+  margin: auto;
+  border: 3px solid rgba(91, 84, 170, 1);
+}
+/*이메일 로그인 버튼*/
+
+.v17_108 {
+  width: 100%;
+  height: 45%;
+  background: url("../images/v63_6.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 3500px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+/*분홍띠*/
+
+.v9_58 {
+  width: 460px;
+  height: 100px;
+  background: rgba(142, 134, 235, 1);
+  opacity: 1;
+  position: relative;
+  top: 45%;
+  margin: auto;
+  border: 3px solid rgba(71, 65, 143, 1);
+}
+/*회원가입 버튼*/
+
+.v9_59 {
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 56.2%;
+  margin: auto;
+  font-family: Inter;
+  font-weight: Semi Bold;
+  font-size: 32px;
+  opacity: 1;
+  text-align: center;
+}
+/*회원 가입 문구*/
+
+.v9_60 {
+  width: 100%;
+  color: rgba(71, 65, 143, 1);
+  position: absolute;
+  top: 77.5%;
+  margin: auto;
+  font-family: Inter;
+  font-weight: Semi Bold;
+  font-size: 32px;
+  opacity: 1;
+  text-align: center;
+}
+/*이메일 로그인 문구*/
+
+.v9_61 {
+  width: 460px;
+  height: 100px;
+  background: rgba(204, 200, 252, 1);
+  opacity: 1;
+  position: relative;
+  top: 68%;
+  margin: auto;
+  border: 3px solid rgba(91, 84, 170, 1);
+}
+/*구글 계정 버튼*/
+
+.v9_62 {
+  width: 100%;
+  color: rgba(71, 65, 143, 1);
+  position: absolute;
+  top: 88%;
+  margin: auto;
+  font-family: Inter;
+  font-weight: Semi Bold;
+  font-size: 32px;
+  opacity: 1;
+  text-align: center;
+}
+/*구글 계정 로그인 문구*/
+
+.v9_64 {
+  width: 425px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 249px;
+  left: 39px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v9_65 {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 25px;
+  opacity: 1;
+  text-align: center;
+}
+/*처음인가요 문구*/
+
+.v9_66 {
+  width: 425px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 300px;
+  left: 39px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v9_72 {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 71%;
+  margin: auto;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 25px;
+  opacity: 1;
+  text-align: center;
+}
+/*계정 여부 문구*/
+
+.v55_3 {
+  width: 218px;
+  height: 142px;
+  background: url("../images/v55_3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  overflow: hidden;
+}
