@@ -3,7 +3,8 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Auth from "../pages/Auth";
 import Home from "../pages/Home";
 import Setting from "../pages/Setting";
-import Test from "../pages/Test";
+import Total from "../pages/Total";
+import Create from "../pages/Create";
 
 const AppRouter = (props: {
   isLoggedIn: boolean;
@@ -15,7 +16,7 @@ const AppRouter = (props: {
       <Routes>
         {props.isLoggedIn ? (
           <>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home userObj={props.userObj} />} />
             <Route
               path="/setting"
               element={
@@ -25,7 +26,11 @@ const AppRouter = (props: {
                 />
               }
             />
-            <Route path="/test" element={<Test userObj={props.userObj} />} />
+            <Route
+              path="/create"
+              element={<Create userObj={props.userObj} />}
+            />
+            <Route path="/total" element={<Total userObj={props.userObj} />} />
           </>
         ) : (
           <Route path="/" element={<Auth />} />

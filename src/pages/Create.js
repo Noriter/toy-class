@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { dbService, storageService } from "../fbase";
-import Toy from "../components/Toy";
+import { storageService, dbService } from "../fbase";
+import { useNavigate } from "react-router-dom";
 
-const Test = (props) => {
+const Create = (props) => {
   const [post, setPost] = useState("");
-  const [posts, setPosts] = useState([]);
   const [attachment, setAttachment] = useState(null);
-  useEffect(() => {
-    dbService
-      .collection("posts")
-      .orderBy("createdAt", "desc")
-      .onSnapshot((snapshot) => {
-        const postArray = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setPosts(postArray);
-      });
-  }, []);
+  const navigate = useNavigate();
   const onSubmit = async (event) => {
     event.preventDefault();
     let attachmentUrl = "";
@@ -38,6 +26,7 @@ const Test = (props) => {
     await dbService.collection("posts").add(postObj);
     setPost("");
     setAttachment(null);
+    navigate("/");
   };
   const onChange = (event) => {
     const {
@@ -61,35 +50,26 @@ const Test = (props) => {
   };
   const onClearAttachment = () => setAttachment(null);
   return (
-    <div>
+    <>
       <form onSubmit={onSubmit}>
         <input
           value={post}
           onChange={onChange}
           type="text"
-          placeholder="Create"
+          placeholder="토이 이름"
           maxLength={120}
         />
         <input type="file" accept="image/*" onChange={onFileChange} />
         <input type="submit" value="Post" />
         {attachment && (
           <div>
-            <img src={attachment} alt="preview" width="300px" height="300px" />
+            <img src={attachment} alt="preview" width="50px" height="50px" />
             <button onClick={onClearAttachment}>Clear</button>
           </div>
         )}
       </form>
-      <div>
-        {posts.map((post) => (
-          <Toy
-            key={post.id}
-            postObj={post}
-            isOwner={post.creatorId === props.userObj.uid}
-          />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
-export default Test;
+export default Create;
