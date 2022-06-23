@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Create = (props) => {
   const [post, setPost] = useState("");
   const [attachment, setAttachment] = useState(null);
+  const [character, setCharacter] = useState("");
   const navigate = useNavigate();
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -19,6 +20,7 @@ const Create = (props) => {
     }
     const postObj = {
       text: post,
+      character: character,
       createdAt: Date.now(),
       creatorId: props.userObj.uid,
       attachmentUrl,
@@ -33,6 +35,12 @@ const Create = (props) => {
       target: { value },
     } = event;
     setPost(value);
+  };
+  const onCheck = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setCharacter(value);
   };
   const onFileChange = (event) => {
     const {
@@ -59,6 +67,46 @@ const Create = (props) => {
           placeholder="토이 이름"
           maxLength={120}
         />
+        <div>
+          <input
+            type="radio"
+            id="active"
+            name="character"
+            value="active"
+            onChange={onCheck}
+          />
+          <label for="active">활발하다</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="friendly"
+            name="character"
+            value="friendly"
+            onChange={onCheck}
+          />
+          <label for="friendly">다정하다</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="calm"
+            name="character"
+            value="calm"
+            onChange={onCheck}
+          />
+          <label for="calm">차분하다</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="cool"
+            name="character"
+            value="cool"
+            onChange={onCheck}
+          />
+          <label for="cool">시원하다</label>
+        </div>
         <input type="file" accept="image/*" onChange={onFileChange} />
         <input type="submit" value="Post" />
         {attachment && (
