@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Setting from "../pages/Setting";
 import Total from "../pages/Total";
 import Create from "../pages/Create";
+import Todo from "../pages/Todo";
 
 const AppRouter = (props: {
   isLoggedIn: boolean;
@@ -30,6 +31,7 @@ const AppRouter = (props: {
               path="/create"
               element={<Create userObj={props.userObj} />}
             />
+            <Route path="/todo" element={<Todo />} />
             <Route path="/total" element={<Total userObj={props.userObj} />} />
           </>
         ) : (
