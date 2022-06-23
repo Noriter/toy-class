@@ -37,6 +37,9 @@ const Home = (props) => {
           <Link to="/setting">Setting</Link>
         </li>
         <li>
+          <Link to="/todo">미션</Link>
+        </li>
+        <li>
           <Link to="/test">전체</Link>
         </li>
       </ul>
