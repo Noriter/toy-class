@@ -52,7 +52,7 @@ const Create = (props) => {
         value={post}
         onChange={onChange}
         type="text"
-        placeholder="What's on your mind?"
+        placeholder="토이 이름"
         maxLength={120}
       />
       <input type="file" accept="image/*" onChange={onFileChange} />

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { dbService } from "../fbase";
 import Toy from "../components/Toy";
-import Create from "../components/Create";
 
-const Test = (props) => {
+const Total = (props) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     dbService
@@ -19,18 +18,16 @@ const Test = (props) => {
   }, []);
   return (
     <div>
-      <Create userObj={props.userObj} />
-      <div>
-        {posts.map((post) => (
-          <Toy
-            key={post.id}
-            postObj={post}
-            isOwner={post.creatorId === props.userObj.uid}
-          />
-        ))}
-      </div>
+      <div>전체 토이</div>
+      {posts.map((post) => (
+        <Toy
+          key={post.id}
+          postObj={post}
+          isOwner={post.creatorId === props.userObj.uid}
+        />
+      ))}
     </div>
   );
 };
 
-export default Test;
+export default Total;
