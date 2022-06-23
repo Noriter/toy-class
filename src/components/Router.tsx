@@ -4,6 +4,7 @@ import Auth from "../pages/Auth";
 import Home from "../pages/Home";
 import Setting from "../pages/Setting";
 import Total from "../pages/Total";
+import Create from "../pages/Create";
 
 const AppRouter = (props: {
   isLoggedIn: boolean;
@@ -25,7 +26,11 @@ const AppRouter = (props: {
                 />
               }
             />
-            <Route path="/test" element={<Total userObj={props.userObj} />} />
+            <Route
+              path="/create"
+              element={<Create userObj={props.userObj} />}
+            />
+            <Route path="/total" element={<Total userObj={props.userObj} />} />
           </>
         ) : (
           <Route path="/" element={<Auth />} />

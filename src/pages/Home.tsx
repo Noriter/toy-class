@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { dbService } from "../fbase";
 import Toy from "../components/Toy";
-import Create from "../components/Create";
 
 const Home = (props) => {
   const [posts, setPosts] = useState([]);
@@ -30,7 +29,7 @@ const Home = (props) => {
             isOwner={posts[0].creatorId === props.userObj.uid}
           />
         ) : (
-          <Create userObj={props.userObj} />
+          <Link to="/create">토이 만들기</Link>
         )}
       </div>
       <ul>

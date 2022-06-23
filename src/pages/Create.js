@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { storageService, dbService } from "../fbase";
+import { useNavigate } from "react-router-dom";
 
 const Create = (props) => {
   const [post, setPost] = useState("");
   const [attachment, setAttachment] = useState(null);
+  const navigate = useNavigate();
   const onSubmit = async (event) => {
     event.preventDefault();
     let attachmentUrl = "";
@@ -24,6 +26,7 @@ const Create = (props) => {
     await dbService.collection("posts").add(postObj);
     setPost("");
     setAttachment(null);
+    navigate("/");
   };
   const onChange = (event) => {
     const {
@@ -47,23 +50,25 @@ const Create = (props) => {
   };
   const onClearAttachment = () => setAttachment(null);
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        value={post}
-        onChange={onChange}
-        type="text"
-        placeholder="토이 이름"
-        maxLength={120}
-      />
-      <input type="file" accept="image/*" onChange={onFileChange} />
-      <input type="submit" value="Post" />
-      {attachment && (
-        <div>
-          <img src={attachment} alt="preview" width="50px" height="50px" />
-          <button onClick={onClearAttachment}>Clear</button>
-        </div>
-      )}
-    </form>
+    <>
+      <form onSubmit={onSubmit}>
+        <input
+          value={post}
+          onChange={onChange}
+          type="text"
+          placeholder="토이 이름"
+          maxLength={120}
+        />
+        <input type="file" accept="image/*" onChange={onFileChange} />
+        <input type="submit" value="Post" />
+        {attachment && (
+          <div>
+            <img src={attachment} alt="preview" width="50px" height="50px" />
+            <button onClick={onClearAttachment}>Clear</button>
+          </div>
+        )}
+      </form>
+    </>
   );
 };
 
